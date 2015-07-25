@@ -3,6 +3,7 @@ using static CSharp6App2.UsingStatic.EncryptWorker;
 using static System.Console;
 using static System.ConsoleColor;
 using static System.IO.Directory;
+//using static System.IO.File;
 using static System.Threading.Interlocked;
 using static System.Threading.Tasks.Parallel; 
 #endregion
@@ -49,7 +50,17 @@ namespace CSharp6App2.UsingStatic
 
         private static void Encrypt(string fileName)
         {
-            Write(fileName);
+            if(Exists(fileName)) // 
+            {
+                Write("Exists", fileName);
+            }
+
+            #region commented code
+            //else if(System.IO.File.Exists(fileName))
+            //{
+            //    Write("File Exists", fileName);
+            //} 
+            #endregion
         }
     }
 }
