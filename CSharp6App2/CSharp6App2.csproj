@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="NameOf\Customer.cs" />
     <Compile Include="NameOf\CustomerPropertyChangeEventArgs.cs" />
+    <Compile Include="NullCondiOp\NullCondOpe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringInterpol\Person.cs" />
     <Compile Include="UsingStatic\EncryptUtil.cs" />
     <Compile Include="UsingStatic\EncryptWorker.cs" />
   </ItemGroup>

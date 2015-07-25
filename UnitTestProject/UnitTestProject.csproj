@@ -50,8 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="StringInterpol\PersonUnitTests.cs" />
     <Compile Include="UsingStatic\CarUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp6App2\CSharp6App2.csproj">
+      <Project>{d9aaa286-9a75-4cba-9895-e92315de29e5}</Project>
+      <Name>CSharp6App2</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

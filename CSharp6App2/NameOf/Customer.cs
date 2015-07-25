@@ -27,11 +27,15 @@ namespace CSharp6App2.NameOf
                     var oldValue = _name;
                     _name = value;
 
-                    OnPropertyChanged(nameof(Name), oldValue, _name);
+                    OnPropertyChanged("Name", oldValue, _name);
+
+                    #region 2
+                    //OnPropertyChanged(nameof(Name), oldValue, _name);
+                    #endregion
                 }
             }
         }
-        
+
         private void OnPropertyChanged(string propertyName, string oldValue, string newValue)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
@@ -47,7 +51,7 @@ namespace CSharp6App2.NameOf
             var eventArgs = e as CustomerPropertyChangeEventArgs;
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("'{0}' propertyChanged, oldValue: '{1}' , newValue: '{2}'", eventArgs.PropertyName,  eventArgs.OldValue, eventArgs.NewValue);
+            Console.WriteLine("'{0}' propertyChanged, oldValue: '{1}' , newValue: '{2}'", eventArgs.PropertyName, eventArgs.OldValue, eventArgs.NewValue);
             Console.ForegroundColor = ConsoleColor.White;
         }
 

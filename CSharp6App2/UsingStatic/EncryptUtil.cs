@@ -50,12 +50,13 @@ namespace CSharp6App2.UsingStatic
 
         private static void Encrypt(string fileName)
         {
-            if(Exists(fileName)) // 
+            // 
+            if(Exists(fileName))  
             {
-                Write("Exists", fileName);
+                Write("File Exists", fileName);
             }
 
-            #region commented code
+            #region 2
             //else if(System.IO.File.Exists(fileName))
             //{
             //    Write("File Exists", fileName);
