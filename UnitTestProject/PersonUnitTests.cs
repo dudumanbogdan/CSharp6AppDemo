@@ -17,9 +17,10 @@ namespace UnitTestProject.StringInterpol
             string message = string.Format("Hello!  My name is {0} {1} and I am {2} years old.", p.FirstName, p.LastName, p.Age);
 
             // assert
-            AreEqual<string>("Hello!  My name is Johny Mont and I am 35 years old.", message);
+            AreEqual("Hello!  My name is Johny Mont and I am 35 years old.", message);
         }
 
+        #region Ex1 - string interpolation
         [TestMethod]
         public void Test_String_Using_StringInterpolation()
         {
@@ -32,5 +33,6 @@ namespace UnitTestProject.StringInterpol
             // assert
             AreEqual<string>("Hello!  My name is Johny Mont and I am 35 years old.", message);
         }
+        #endregion
     }
 }

@@ -1,5 +1,12 @@
-﻿namespace CSharp6App2.NullCondiOp
+﻿using System;
+
+namespace CSharp6App2.NullCondiOp
 {
+    public class FooBar
+    {
+        public Foo Foo { get; set; }
+    }
+
     public class Foo
     {
         public Bar Bar { get; set; }
@@ -9,12 +16,7 @@
     {
         public void SayBar()
         {
-            // say something
+            Console.WriteLine("Say bar");
         }
-    }
-
-    public class FooBar
-    {
-        public Foo Foo { get; set; }
     }
 }

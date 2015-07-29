@@ -4,8 +4,8 @@ using static System.Console;
 using static System.ConsoleColor;
 using static System.IO.Directory;
 //using static System.IO.File;
-using static System.Threading.Interlocked;
-using static System.Threading.Tasks.Parallel; 
+using static System.Threading.Tasks.Parallel;
+using static System.Tuple;
 #endregion
 using System;
 
@@ -13,10 +13,10 @@ namespace CSharp6App2.UsingStatic
 {
     public class EncryptUtil
     {
-        public static int EncryptFiles()
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("SonarQube", "S2228:Console logging should not be used", Justification = "<Pending>")]
+        public static void EncryptFiles()
         {
             ConsoleColor color = ForegroundColor;
-            int fileCount = 0;
 
             try
             {
@@ -33,7 +33,6 @@ namespace CSharp6App2.UsingStatic
                     DoWork();
                     Encrypt(fileName);
                     WriteLine("\t '{0}' encrypted ", fileName);
-                    Increment(ref fileCount);
                 });
 
                 ForegroundColor = Yellow;
@@ -44,23 +43,25 @@ namespace CSharp6App2.UsingStatic
                 ForegroundColor = color;
                 WriteLine("Finished");
             }
-
-            return fileCount;
         }
 
         private static void Encrypt(string fileName)
         {
-            // 
-            if(Exists(fileName))  
+            //
+            if(Exists(fileName))
             {
                 Write("File Exists", fileName);
+
+                #region Create obj
+                var obj = Create(1, 2, 3);
+                #endregion
             }
 
             #region 2
             //else if(System.IO.File.Exists(fileName))
             //{
             //    Write("File Exists", fileName);
-            //} 
+            //}
             #endregion
         }
     }

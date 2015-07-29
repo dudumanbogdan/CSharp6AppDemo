@@ -42,7 +42,7 @@ namespace UnitTestProject
             // act
 
             // assert
-            
+
             AreNotEqual(car.Model, "DefaultName");
         }
 

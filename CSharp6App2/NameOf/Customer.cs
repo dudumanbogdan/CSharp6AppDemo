@@ -5,7 +5,6 @@ namespace CSharp6App2.NameOf
 {
     public class Customer : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Customer(string name)
@@ -17,7 +16,7 @@ namespace CSharp6App2.NameOf
 
         private string _name;
 
-        public string Name
+        public string FullName
         {
             get { return _name; }
             set
@@ -27,10 +26,10 @@ namespace CSharp6App2.NameOf
                     var oldValue = _name;
                     _name = value;
 
-                    OnPropertyChanged("Name", oldValue, _name);
+                    OnPropertyChanged("FullName", oldValue, _name);
 
                     #region 2
-                    //OnPropertyChanged(nameof(Name), oldValue, _name);
+                    //OnPropertyChanged(nameof(FullName), oldValue, _name);
                     #endregion
                 }
             }
@@ -46,7 +45,16 @@ namespace CSharp6App2.NameOf
             }
         }
 
-        private void Customer_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        #region Null-Cond Operator - Invoke - ex2
+        private void OnPropertyChanged2(string propertyName, string oldValue, string newValue)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+
+            handler?.Invoke(this, new CustomerPropertyChangeEventArgs(propertyName, oldValue, newValue));
+        }
+        #endregion
+
+        public static void Customer_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             var eventArgs = e as CustomerPropertyChangeEventArgs;
 

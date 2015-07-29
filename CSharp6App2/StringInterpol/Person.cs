@@ -19,19 +19,20 @@ namespace CSharp6App2.StringInterpol
             FirstName = firstName;
             LastName = lastName;
 
-            // ex.2
+            #region Ex2
             FullName = $"{firstName} {lastName}";
+            #endregion
         }
 
         // ex.3
+        #region Ex3
         private void ValidateParam(string paramName)
         {
             if (string.IsNullOrEmpty(paramName))
             {
-                //throw new ArgumentNullException($"The property {name} is null or empty.", nameof(name));
-                Console.WriteLine($"The property {paramName} is null or empty.");
-
+                Console.WriteLine($"The parameter {paramName} is null or empty at {DateTime.Now:dd-MMM-yyyy}");
             }
         }
+        #endregion
     }
 }
