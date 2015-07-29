@@ -15,7 +15,7 @@ namespace CSharp6App2
         static void Main(string[] args)
         {
             #region Using static - ex1
-            //EncryptUtil.EncryptFiles();
+            EncryptUtil.EncryptFiles();
             #endregion
 
             #region nameOf - ex1
@@ -33,8 +33,8 @@ namespace CSharp6App2
             #endregion
 
             #region String Interpolation - ex2
-            //var p = new Person("", "John");
-            //Console.WriteLine($"p.FullName: {p.FullName}");
+            var p = new Person("", "John");
+            Console.WriteLine($"p.FullName: {p.FullName}");
             #endregion
 
             #region Null Conditional Operator - ex1 FooBar
@@ -72,7 +72,7 @@ namespace CSharp6App2
             #region Null Conditional Operator - ex 4
             //Point[] points2 = null;
             //Point[] points3 = new Point[] { }; // !
-            //Console.WriteLine(points2?[0]?.ToString());
+            //Console.WriteLine(points2[0]?.ToString());
             #endregion
 
             #region AutoProperty - ex1
@@ -90,14 +90,13 @@ namespace CSharp6App2
             //Console.WriteLine(company3.ToString());
             #endregion
 
-            #region Expression Bodied Methods - ex3
+            #region Expression Bodied Methods - ex3 companes
             var companies = new Companies();
             companies.Add(new Company("c1", "Iasi"));
             companies.Add(new Company("c2", "Cluj"));
             companies.Add(new Company("c3", "Bucuresti"));
 
-
-            Console.WriteLine($"expression bodied methods - ex3, company: {companies["c3"]}");
+            //Console.WriteLine($"expression bodied methods - ex3, company: {companies["c3"]}");
 
             #endregion
 
@@ -107,23 +106,22 @@ namespace CSharp6App2
 
             #region DictionaryInitializer - ex3
             var dic = dicHelper.Ex3();
-            Console.WriteLine("ex3 - dictionary initializer");
-
-            Console.WriteLine(dic[10]);
+            //Console.WriteLine("ex3 - dictionary initializer");
+            //Console.WriteLine(dic[10]);
 
             // ! Console.WriteLine(dic[2]);
 
             #endregion
 
             #region DictionaryInitializer - ex4
-            //var list = dicHelper.Ex4();
+            var list = dicHelper.Ex4();
 
-            ////Console.WriteLine(list[2]);
+            Console.WriteLine(list[4]);
             #endregion
 
             #region ExceptionImprov - ex1
             var wHandler = new ExceptionHelper();
-            //wHandler.ReadDataFromGoogle();
+            wHandler.ReadDataFromGoogle();
             #endregion
 
             #region ExceptionImprov - ex2 await
@@ -132,7 +130,7 @@ namespace CSharp6App2
             #endregion
 
             #region ExceptionImprov - ex3
-            wHandler.ShowCompanyDetails();
+            //wHandler.ShowCompanyDetails();
             #endregion
 
             Console.WriteLine("");

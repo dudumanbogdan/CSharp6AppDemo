@@ -3,7 +3,6 @@ using static CSharp6App2.UsingStatic.EncryptWorker;
 using static System.Console;
 using static System.ConsoleColor;
 using static System.IO.Directory;
-//using static System.IO.File;
 using static System.Threading.Tasks.Parallel;
 using static System.Tuple;
 #endregion
@@ -52,9 +51,8 @@ namespace CSharp6App2.UsingStatic
             {
                 Write("File Exists", fileName);
 
-                #region Create obj
+
                 var obj = Create(1, 2, 3);
-                #endregion
             }
 
             #region 2

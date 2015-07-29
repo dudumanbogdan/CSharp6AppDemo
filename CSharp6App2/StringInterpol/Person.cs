@@ -30,7 +30,7 @@ namespace CSharp6App2.StringInterpol
         {
             if (string.IsNullOrEmpty(paramName))
             {
-                Console.WriteLine($"The parameter {paramName} is null or empty at {DateTime.Now:dd-MMM-yyyy}");
+                Console.WriteLine($"The parameter {paramName} is null or empty at {DateTime.Now:dd-MM-yy}");
             }
         }
         #endregion

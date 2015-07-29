@@ -43,7 +43,7 @@ namespace CSharp6App2.DictionaryInitializer
 
         #region ex2 - dic - JSON Methods Helpers
 
-        public JObject ToJson() => new JObject() {["x"] = X,["y"] = Y };
+        public JObject ToJson() => new JObject() {["x"] = X , ["y"] = Y };
 
         #endregion
 
@@ -64,7 +64,6 @@ namespace CSharp6App2.DictionaryInitializer
         #region ex4 - List<int>
         public List<int> Ex4()
         {
-
             var list = new List<int>
             {
                 [0] = 10,

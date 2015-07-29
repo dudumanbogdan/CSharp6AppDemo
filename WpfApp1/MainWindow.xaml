@@ -9,7 +9,7 @@
     <Grid>
         <Grid>
             <StackPanel HorizontalAlignment="Left" Height="134" Margin="10,10,0,0" VerticalAlignment="Top" Width="236">
-                <Label x:Name="label" Content="{Binding Name}"/>
+                <Label x:Name="label" Content="{Binding Naaaaaame}"/>
                 <TextBox x:Name="textBox"/>
                 <Button x:Name="button" Content="Change ViewModel Name Property" Click="button_Click"/>
             </StackPanel>

@@ -17,17 +17,18 @@ namespace CSharp6App2.ExceptionImprov
                 var site = "http://www.google.coom/";
                 var req = WebRequest.Create(site);
                 var res = req.GetResponse();
-                Console.WriteLine($"Content length: {res.ContentLength}");
+                //Console.WriteLine($"Content length: {res.ContentLength}");
             }
             catch (WebException ex) when (ex.Status == WebExceptionStatus.NameResolutionFailure)
             {
+
                 Console.WriteLine("Handle NameResolutionFailure");
             }
             catch (WebException ex) when (ex.Status == WebExceptionStatus.ConnectFailure)
             {
                 Console.WriteLine("Handle ConnectFailure");
             }
-            catch (CustomException ex) when (ex.Severity > 50 && ex.GetType() == typeof(SqlException))
+            catch (CustomException ex) when (ex.Severity > 50)
             {
                 SqlExceptionManager.HandleException(ex);
             }

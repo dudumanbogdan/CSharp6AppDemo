@@ -9,7 +9,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PersonViewModel _personViewModel;
+        private PersonViewModel2 _personViewModel;
 
         public MainWindow()
         {
@@ -20,7 +20,7 @@ namespace WpfApp1
 
         private void Init()
         {
-            _personViewModel = new PersonViewModel();
+            _personViewModel = new PersonViewModel2();
 
             DataContext = _personViewModel;
         }
@@ -31,11 +31,11 @@ namespace WpfApp1
 
             if (string.IsNullOrWhiteSpace(textBoxText.Text))
             {
-                _personViewModel.Name = "Empty text introduced.";
+                _personViewModel.Naaaaaame = "Empty text introduced.";
             }
             else
             {
-                _personViewModel.Name = textBoxText.Text;
+                _personViewModel.Naaaaaame = textBoxText.Text;
             }
         }
 

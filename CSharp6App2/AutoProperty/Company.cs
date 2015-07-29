@@ -7,6 +7,7 @@ namespace CSharp6App2.AutoProperty
     public class Company
     {
         #region ex1 -Auto-Property initializer - old
+
         private int _size = 10;
 
         public int CompanySize1
@@ -19,9 +20,9 @@ namespace CSharp6App2.AutoProperty
 
         #endregion
 
-        #region ex1 - old - Getter & Set
-        //public string FullName { get; private set; }
-        #endregion
+        //#region ex1 - old - Getter & Set
+        ////public string FullName { get; private set; }
+        //#endregion
 
         public Company()
         {
@@ -38,7 +39,6 @@ namespace CSharp6App2.AutoProperty
             FullName = $"{companyName}  {city}";
             #endregion
         }
-
 
         public static Company NewCompany1 => new Company();
         public static Company NewCompany2() => new Company();

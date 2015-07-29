@@ -25,7 +25,7 @@ namespace WpfApp1.Model
         #endregion
 
         #region Properties
-        public string Name
+        public string Naaaaaame
         {
             get { return _name; }
             set
@@ -35,7 +35,7 @@ namespace WpfApp1.Model
                     _name = value;
 
                     // 1.
-                    OnPropertyChanged("Name");
+                    OnPropertyChanged(nameof(Naaaaaame));
 
                     #region 2
                     // !
@@ -50,7 +50,7 @@ namespace WpfApp1.Model
 
         public PersonViewModel2()
         {
-            Name = "Default Name";
+            Naaaaaame = "Default Name";
         }
 
         private void OnPropertyChanged(string propertyName)
