@@ -114,9 +114,9 @@ namespace CSharp6App2
             #endregion
 
             #region DictionaryInitializer - ex4
-            var list = dicHelper.Ex4();
+            //var list = dicHelper.Ex4();
 
-            Console.WriteLine(list[4]);
+            //Console.WriteLine(list[4]);
             #endregion
 
             #region ExceptionImprov - ex1
